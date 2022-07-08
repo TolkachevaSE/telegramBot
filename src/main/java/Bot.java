@@ -76,7 +76,7 @@ public class Bot extends TelegramLongPollingBot {
         Date dateM = new Date(message.getDate() * 1000L);
         SimpleDateFormat jdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String dateForBase = jdf.format(dateM);
-        LOGGER.debug("dateForBase = " + dateForBase);
+        //LOGGER.debug("dateForBase = " + dateForBase);
         String userName = message.getChat().getFirstName();
         Parsing pars = new Parsing();
 
@@ -84,7 +84,7 @@ public class Bot extends TelegramLongPollingBot {
 
             SendMessage messageOut = new SendMessage(); // Create a SendMessage object with mandatory fields
             messageOut.setChatId(message.getChatId().toString());
-            LOGGER.debug("Message:" + message.getText());
+            LOGGER.debug("Message:" + String.format(new Locale("ru"),message.getText()));
 
             Double sum = 0.0d;
             String category = null;

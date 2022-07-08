@@ -7,6 +7,7 @@ import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class SQLTable {
     static Logger LOGGER = LoggerFactory.getLogger(SQLTable.class);
@@ -17,7 +18,7 @@ public class SQLTable {
         try {
             Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error("Class.forName:"+e.toString());
         }
         //Connection connection = DriverManager.getConnection("jdbc:sqlite:" + URL_DATABASE);//"myFinance.db"
         try {
@@ -33,9 +34,6 @@ public class SQLTable {
             LOGGER.error("Не могу подключиться к БД: " + e.getMessage());
             return null;
         }
-
-
-        //  return connection;
     }
 
     //------------------------------To see all notes by the chosen category
@@ -217,16 +215,16 @@ public class SQLTable {
     }
 
     public boolean deleteFromTableLastInsert(Connection connection, String username) {
+        String sql = String.format("DELETE  FROM finance WHERE id in (SELECT id FROM finance WHERE person = \'%s\' ORDER BY dates DESC limit 1);", username);
 
         try {
             Statement stmt = connection.createStatement();
-            String sql = String.format("DELETE  FROM finance WHERE id in (SELECT id FROM finance WHERE person == \"%s\" ORDER BY dates DESC limit 1);", username);
             stmt.executeUpdate(sql);
             stmt.close();
             return  true;
 
-        } catch (Exception e) {
-            LOGGER.error(e.getClass().getName() + ": " + e.getMessage());
+        } catch (SQLException e) {
+            LOGGER.error("Can't delete: sql= "+sql+e.getClass().getName() + ": " + e.getMessage());
             return false;
         }
     }
