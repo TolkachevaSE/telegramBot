@@ -11,7 +11,7 @@ static Logger LOGGER = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) throws Exception {
         LOGGER.debug("Ура. все работает!");
-        /*try {
+        try {
             Bot bot=new Bot();
             TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
             botsApi.registerBot(new Bot());
@@ -25,9 +25,9 @@ static Logger LOGGER = LoggerFactory.getLogger(Main.class);
             LOGGER.debug("Ping ok");
         }catch(Exception e){
             LOGGER.error("Ping failed");
-        }*/
-        SQLTable tb= new SQLTable();
-        tb.createTable(tb.getConnectionBD());
+        }
+        /*SQLTable tb= new SQLTable();
+        tb.createTable(tb.getConnectionBD());*/
 
 
             }
