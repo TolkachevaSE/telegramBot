@@ -70,7 +70,6 @@ public enum Category {
     }
 
     private static String enumToString(Category cat) {
-        System.out.println(cat.toString().toLowerCase());
         return cat.toString().toLowerCase();
     }
 
@@ -90,8 +89,6 @@ public enum Category {
         for (Category category : Category.values()) {
             keywodsForCategory[i] = category.name() + ": " + category.anotherName + ", " + category.secondName + ", "
                     + category.thirdname + ", " + category.fourthname + ", " + category.fifthname;
-            System.out.println(category.name() + ": " + category.anotherName + ", " + category.secondName + ", "
-                    + category.thirdname + ", " + category.fourthname + ", " + category.fifthname);
             i++;
         }
         return keywodsForCategory;

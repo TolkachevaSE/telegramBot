@@ -11,7 +11,6 @@ import java.util.Locale;
 
 public class SQLTable {
     static Logger LOGGER = LoggerFactory.getLogger(SQLTable.class);
-    //private final String URL_DATABASE = "";
 
     public Connection getConnectionBD() {
 
@@ -20,7 +19,6 @@ public class SQLTable {
         } catch (ClassNotFoundException e) {
             LOGGER.error("Class.forName:"+e.toString());
         }
-        //Connection connection = DriverManager.getConnection("jdbc:sqlite:" + URL_DATABASE);//"myFinance.db"
         try {
             URI dbUri = new URI(System.getenv("DATABASE_URL"));
 
@@ -36,7 +34,7 @@ public class SQLTable {
         }
     }
 
-    //------------------------------To see all notes by the chosen category
+    //------------------------------To see all notes by the CHOSEN category
     public ArrayList<String> showCatFromBase(Connection connection, String category, long date, String user) throws SQLException {
         String dateOld;
         Calendar cal = Calendar.getInstance();
@@ -79,7 +77,7 @@ public class SQLTable {
         return answer;
     }
 
-    //------------------------------To see all results from the table for all columns
+    //------------------------------To see all results from the table for ALL columns
     public String showTableFromBase(Connection connection, long date, String user)  {
 
         String dateOld;
@@ -210,8 +208,7 @@ public class SQLTable {
         } catch (Exception e) {
             LOGGER.error(e.getClass().getName() + ": " + e.getMessage());
             return false;
-            //System.exit(0);
-        }
+                    }
     }
 
     public boolean deleteFromTableLastInsert(Connection connection, String username) {

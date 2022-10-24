@@ -31,7 +31,7 @@ public class ToExcel {
         }
     }
 
-    private void fileFill() throws SQLException, IOException, ClassNotFoundException, URISyntaxException {
+    private void fileFill() throws SQLException, IOException {
         Workbook workbook = new XSSFWorkbook();
         Sheet sheet = workbook.createSheet("My Finance");
         Row header = sheet.createRow(0);

@@ -89,7 +89,7 @@ public class Bot extends TelegramLongPollingBot {
             Double sum = 0.0d;
             String category = null;
             String sql;
-//-----------------------------------------Ввод дохода
+//-----------------------------------------Input income
             if (income) {
 
                 Double summ = pars.calculate(pars.detectNumbers(pars.detect(messageFromBot)),
@@ -111,7 +111,7 @@ public class Bot extends TelegramLongPollingBot {
                 income=false;
                 return;
             }
-//-----------------------------------Ввод расходов через сообщение боту от пользователя
+//-----------------------------------Input expenses by messaging from user
             if (pars.detectGoodMessage(messageFromBot)) {
                 sum = pars.calculate(pars.detectNumbers(pars.detect(messageFromBot)),
                         pars.detectOperators(pars.detect(messageFromBot)));
@@ -138,7 +138,7 @@ public class Bot extends TelegramLongPollingBot {
             }
         }
 
-//-----------------------------------------------Обрабатыем ввод расходов через меню
+//-----------------------------------------------Input expenses by selecting category from menu
         if (command_enter) {
             if (!selectedCategory.equals("")) {
 
@@ -162,7 +162,7 @@ public class Bot extends TelegramLongPollingBot {
             }
 
         }
-//--------------------------------- Обрабатываем команды
+//--------------------------------- Processing commands in menu
         if (message.hasEntities()) {
             Optional<MessageEntity> commandEntity = message.getEntities().stream().filter(e -> "bot_command".equals(e.getType())).findFirst();
 
@@ -242,7 +242,7 @@ public class Bot extends TelegramLongPollingBot {
                             LOGGER.error("Ошибка при попытке посмотреть остаток: " + e.toString());
                         }
                         return;
-                    case "/enter_expense": // ввод расходов через меню
+                    case "/enter_expense": // input expenses from menu
                         List<List<InlineKeyboardButton>> but = new ArrayList<>();
                         int i = 1;
                         InlineKeyboardButton button1 = new InlineKeyboardButton();
@@ -297,11 +297,11 @@ public class Bot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return "FinanceToBot";
+        return "_name_of_the_bot_";
     }
 
     @Override
     public String getBotToken() {
-        return "5546030768:AAGF6IqSKSjJ_LkewKUXTanns1AMFUDTyZ0";
+        return "_token_";
     }
 }

@@ -1,6 +1,5 @@
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
@@ -20,33 +19,4 @@ static Logger LOGGER = LoggerFactory.getLogger(Main.class);
             e.printStackTrace();
             LOGGER.error(e.toString());}
 
-        try {
-            PingG.scheduler();
-            LOGGER.debug("Ping ok");
-        }catch(Exception e){
-            LOGGER.error("Ping failed");
-        }
-        /*SQLTable tb= new SQLTable();
-        tb.createTable(tb.getConnectionBD());*/
-
-
-            }
-
-
-
-
-
-
-
-
-    //    ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
-//scheduler
-      //  scheduleAtFixedRate(new MyTimerTask(), 0, 1, TimeUnit.MINUTES);
-
-}
-/*try {
-    SQLTable table = new SQLTable();
-    table.createTable(table.getConnectionBD());
-}catch(Exception e)
-{e.printStackTrace();}
-    }}*/
+}}
