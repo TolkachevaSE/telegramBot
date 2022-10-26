@@ -14,7 +14,7 @@ Using a Telegram bot is convenient becouse it is always at hand on the phone, do
 
 ## Screenshots
 
-![screen1](https://github.com/TolkachevaSE/telegramBot/tree/main/screenshots/screenshot1.jpg,"TelegramBot")
+![screen1](https://github.com/TolkachevaSE/telegramBot/tree/main/screenshots/screenshot1.jpg)
 
 ## How to start
 
