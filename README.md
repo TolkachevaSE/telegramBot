@@ -12,9 +12,9 @@ Using a Telegram bot is convenient becouse it is always at hand on the phone, do
 - you can enter the receipt of money and receive a report on the balance;
 - you can view the list of keywords by selecting the appropriate command from the list in the menu.
 
-## Screenshots
+## Screenshot
 
-![screen1](https://github.com/TolkachevaSE/telegramBot/tree/main/screenshots/screenshot1.jpg)
+![screen1](/screenshot1.jpg)
 
 ## How to start
 
@@ -33,6 +33,6 @@ Using a Telegram bot is convenient becouse it is always at hand on the phone, do
    4. If there was an error in the message, but the entry has already been made to the table, you can delete it using the "/delete_insert" function from the menu.
    5. Using the menu items, get the necessary reports or upload the table to Excel.
 
-![screen2](https://github.com/TolkachevaSE/telegramBot/tree/main/screenshots/screenshot2.png)
+![screen2](screenshot2.png)
 
 
