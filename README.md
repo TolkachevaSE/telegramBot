@@ -16,6 +16,8 @@ Using a Telegram bot is convenient becouse it is always at hand on the phone, do
 
 ![screen1](/screenshot1.jpg)
 
+![screen1](https://drive.google.com/file/d/1RfqRLmTCKGTmenmjOjXeyiN9_gkzrh0_/view?usp=sharing)
+
 ## How to start
 
  1. In telegram in the search bar you are looking for the @FinanceToBot bot.
@@ -33,6 +35,7 @@ Using a Telegram bot is convenient becouse it is always at hand on the phone, do
    4. If there was an error in the message, but the entry has already been made to the table, you can delete it using the "/delete_insert" function from the menu.
    5. Using the menu items, get the necessary reports or upload the table to Excel.
 
-![screen2](screenshot2.png)
+![screen2](/screenshot2.jpg,"TelegramBot")
 
 
+![screen2](https://drive.google.com/file/d/1MWis2fd1I-3EOM-64zwy8ZR6loA_rvac/view?usp=sharing)

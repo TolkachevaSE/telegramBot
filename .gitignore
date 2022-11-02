@@ -1,6 +1,8 @@
+*.iml
+/out
+ .idea/
 
-/build
 /out
 *.iml
-/.idea/
+/.idea
 
