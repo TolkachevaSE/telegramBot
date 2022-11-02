@@ -14,7 +14,7 @@ Using a Telegram bot is convenient becouse it is always at hand on the phone, do
 
 ## Screenshot
 
-![screen1](https://drive.google.com/file/d/1RfqRLmTCKGTmenmjOjXeyiN9_gkzrh0_/view?usp=sharing)
+![screen1](screens/screenshot1.jpg)
 
 ## How to start
 
@@ -33,7 +33,4 @@ Using a Telegram bot is convenient becouse it is always at hand on the phone, do
    4. If there was an error in the message, but the entry has already been made to the table, you can delete it using the "/delete_insert" function from the menu.
    5. Using the menu items, get the necessary reports or upload the table to Excel.
 
-![screen2](/screenshot2.jpg, 'TelegramBot')
-
-
-![screen2](https://drive.google.com/file/d/1MWis2fd1I-3EOM-64zwy8ZR6loA_rvac/view?usp=sharing)
+![screen2](screens/screenshot2.jpg)
